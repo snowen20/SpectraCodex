@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "drop-2026-03-05",
+    "title": "SpectraCodex Drop #1",
+    "date": "2026-03-05",
+    "description": "Three browser-native tools that actually ship: a game builder, a focus timer, and a color palette generator.",
+    "listingSlugs": ["pixel-quest-builder", "focusflow-timer", "palette-drop"],
+    "published": true
+  },
+  {
+    "slug": "drop-2026-02-28",
+    "title": "SpectraCodex Drop #0",
+    "date": "2026-02-28",
+    "description": "Tools that respect your privacy and your time — budget tracking, distraction-free writing, and local discovery.",
+    "listingSlugs": ["budget-blip", "draft-spark", "locale-lens"],
+    "published": true
+  }
+]

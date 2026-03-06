@@ -1,0 +1,152 @@
+[
+  {
+    "slug": "pixel-quest-builder",
+    "title": "Pixel Quest Builder",
+    "pitch": "Build retro-style RPG browser games with zero code — drag tiles, define quests, export in minutes.",
+    "audience": "Game hobbyists and educators who want to make browser games without learning a game engine",
+    "problem": "Building a playable browser game from scratch takes weeks; Pixel Quest Builder gets you from idea to shareable link in an afternoon.",
+    "ctaLink": "https://example.com/pixel-quest-builder",
+    "ctaLabel": "Play now",
+    "priceModel": "free",
+    "thumbnail": "https://placehold.co/400x300/7c3aed/white?text=PixelQuest",
+    "screenshots": [
+      "https://placehold.co/800x500/1a1a2e/7c3aed?text=Screenshot+1",
+      "https://placehold.co/800x500/1a1a2e/7c3aed?text=Screenshot+2"
+    ],
+    "demoScript": [
+      "Open the editor and select a tileset from the built-in library",
+      "Drag tiles onto the map canvas to build your world",
+      "Click a character to define its quest dialogue and win conditions",
+      "Hit Export and share the generated URL — fully playable in any browser"
+    ],
+    "contact": "pixelquest@example.com",
+    "tags": ["game", "no-code", "browser"],
+    "dateAdded": "2026-03-04",
+    "featured": true
+  },
+  {
+    "slug": "focusflow-timer",
+    "title": "FocusFlow Timer",
+    "pitch": "An adaptive Pomodoro timer that lengthens your focus blocks the longer your streak — stay in flow.",
+    "audience": "Knowledge workers and students who struggle to maintain focus during long work sessions",
+    "problem": "Fixed Pomodoro intervals ignore your actual focus state, breaking momentum right when you hit a flow state.",
+    "ctaLink": "https://example.com/focusflow-timer",
+    "ctaLabel": "Try it free",
+    "priceModel": "free",
+    "thumbnail": "https://placehold.co/400x300/7c3aed/white?text=FocusFlow",
+    "screenshots": [
+      "https://placehold.co/800x500/0f1923/7c3aed?text=Screenshot+1",
+      "https://placehold.co/800x500/0f1923/7c3aed?text=Screenshot+2"
+    ],
+    "demoScript": [
+      "Start a focus session — the timer begins at 25 minutes by default",
+      "Complete the session without breaking; your next block automatically extends to 30 minutes",
+      "Check your daily streak graph to see your focus patterns over time",
+      "Set a daily session target and watch the app nudge you back when you drift"
+    ],
+    "contact": "focusflow@example.com",
+    "tags": ["productivity", "timer", "focus"],
+    "dateAdded": "2026-03-03",
+    "featured": true
+  },
+  {
+    "slug": "palette-drop",
+    "title": "Palette Drop",
+    "pitch": "Generate, tweak, and export full color palettes from a single seed color — Figma export included.",
+    "audience": "Designers and developers who need a consistent color palette fast without opening a complex design tool",
+    "problem": "Picking a harmonious color palette from scratch wastes hours; Palette Drop generates a complete, accessible scale in seconds.",
+    "ctaLink": "https://example.com/palette-drop",
+    "ctaLabel": "Try it free",
+    "priceModel": "free",
+    "thumbnail": "https://placehold.co/400x300/7c3aed/white?text=PaletteDrop",
+    "screenshots": [
+      "https://placehold.co/800x500/12001f/7c3aed?text=Screenshot+1",
+      "https://placehold.co/800x500/12001f/7c3aed?text=Screenshot+2"
+    ],
+    "demoScript": [
+      "Enter any hex color as your seed",
+      "Palette Drop generates a 10-shade scale, complementary pairs, and contrast scores",
+      "Adjust tones with the lightness and saturation sliders",
+      "Export as CSS variables, Tailwind config, or Figma tokens with one click"
+    ],
+    "contact": "palette@example.com",
+    "tags": ["design", "color", "tool"],
+    "dateAdded": "2026-03-01",
+    "featured": false
+  },
+  {
+    "slug": "budget-blip",
+    "title": "Budget Blip",
+    "pitch": "Privacy-first personal finance tracker — CSV import, category tagging, monthly summaries, no account needed.",
+    "audience": "Privacy-conscious individuals who want to track spending without handing their data to a fintech app",
+    "problem": "Every budgeting app wants your bank login or charges a subscription; Budget Blip runs entirely in your browser with no server.",
+    "ctaLink": "https://example.com/budget-blip",
+    "ctaLabel": "Try it free",
+    "priceModel": "free",
+    "thumbnail": "https://placehold.co/400x300/7c3aed/white?text=BudgetBlip",
+    "screenshots": [
+      "https://placehold.co/800x500/001a0f/7c3aed?text=Screenshot+1",
+      "https://placehold.co/800x500/001a0f/7c3aed?text=Screenshot+2"
+    ],
+    "demoScript": [
+      "Export a CSV from your bank and drag it into Budget Blip",
+      "Transactions are parsed and displayed instantly — no upload, everything stays local",
+      "Click any transaction to assign it a category tag",
+      "Open the Summary view to see a monthly breakdown by category"
+    ],
+    "contact": "budgetblip@example.com",
+    "tags": ["finance", "productivity", "privacy"],
+    "dateAdded": "2026-02-20",
+    "featured": false
+  },
+  {
+    "slug": "draft-spark",
+    "title": "Draft Spark",
+    "pitch": "Distraction-free writing with smart un-stuck prompts — no AI, just contextual nudges when you stop typing.",
+    "audience": "Writers, bloggers, and students who experience writer's block and want a focused drafting environment",
+    "problem": "AI writing tools take over your voice; Draft Spark helps you get unstuck with prompts, then gets out of the way.",
+    "ctaLink": "https://example.com/draft-spark",
+    "ctaLabel": "Start writing",
+    "priceModel": "freemium",
+    "thumbnail": "https://placehold.co/400x300/7c3aed/white?text=DraftSpark",
+    "screenshots": [
+      "https://placehold.co/800x500/1a1200/7c3aed?text=Screenshot+1",
+      "https://placehold.co/800x500/1a1200/7c3aed?text=Screenshot+2"
+    ],
+    "demoScript": [
+      "Open a new draft and start typing in the clean, minimal editor",
+      "Stop for 10 seconds — a gentle prompt appears from the local library (never AI-generated)",
+      "Accept, dismiss, or swap the prompt with one click",
+      "Export your finished draft as Markdown or plain text"
+    ],
+    "contact": "draftspark@example.com",
+    "tags": ["writing", "productivity", "tool"],
+    "dateAdded": "2026-02-15",
+    "featured": false
+  },
+  {
+    "slug": "locale-lens",
+    "title": "Locale Lens",
+    "pitch": "Discover and bookmark local businesses on a privacy-first map — no trackers, no accounts, no ads.",
+    "audience": "Local community members who want to find and share neighborhood spots without using Google Maps or Yelp",
+    "problem": "Every local discovery app profits from your location data; Locale Lens uses OpenStreetMap and stores everything in localStorage.",
+    "ctaLink": "https://example.com/locale-lens",
+    "ctaLabel": "Explore the map",
+    "priceModel": "free",
+    "thumbnail": "https://placehold.co/400x300/7c3aed/white?text=LocaleLens",
+    "screenshots": [
+      "https://placehold.co/800x500/001a1a/7c3aed?text=Screenshot+1",
+      "https://placehold.co/800x500/001a1a/7c3aed?text=Screenshot+2"
+    ],
+    "demoScript": [
+      "Open the map — it loads your area using OpenStreetMap tiles, no account required",
+      "Search for a business type and click any pin to see basic info",
+      "Bookmark spots with a single click; they persist in your browser's localStorage",
+      "Export your bookmarks as JSON to back them up or share with a friend"
+    ],
+    "contact": "localelens@example.com",
+    "tags": ["local", "map", "community"],
+    "dateAdded": "2026-02-10",
+    "featured": false
+  }
+]
