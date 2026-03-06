@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Submit your vibe-coded app or tool to SpectraCodex.",
 };
 
-const GITHUB_OWNER = "OWNER";
+const GITHUB_OWNER = "snowen20";
 const GITHUB_REPO = "spectracodex";
 
 const requirements = [
