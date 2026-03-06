@@ -15,7 +15,7 @@ export default function HomePage() {
       <section className="text-center mb-16">
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4">
           Curated tools from{" "}
-          <span className="text-[#7c3aed]">vibecodeineers</span>
+          <span className="text-[#7c3aed]">vibecodineers</span>
         </h1>
         <p className="text-[#666666] text-lg max-w-xl mx-auto mb-8">
           SpectraCodex is a drop-based directory of apps and tools built by
