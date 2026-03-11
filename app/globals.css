@@ -4,7 +4,7 @@
   --color-bg: #0a0a0a;
   --color-surface: #111111;
   --color-border: #222222;
-  --color-muted: #9090a0;
+  --color-muted: #c0c0c8;
   --color-accent: #7c3aed;
   --color-accent-hover: #6d28d9;
   --font-sans: var(--font-inter);
@@ -16,6 +16,6 @@ html {
 
 body {
   background: #0a0a0a;
-  color: #b8b8c0;
+  color: white;
   font-family: var(--font-inter, system-ui, sans-serif);
 }
