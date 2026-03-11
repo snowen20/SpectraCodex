@@ -8,10 +8,10 @@
     "ctaLink": "https://ghosthunter.gumroad.com",
     "ctaLabel": "Get GhostHunter",
     "priceModel": "freemium",
-    "thumbnail": "https://placehold.co/400x300/1a1a2e/00ff88?text=GhostHunter",
+    "thumbnail": "/images/ghosthunter-thumb.png",
     "screenshots": [
-      "https://placehold.co/800x500/1a1a2e/00ff88?text=Screenshot+1",
-      "https://placehold.co/800x500/1a1a2e/00ff88?text=Screenshot+2"
+      "/images/ghosthunter-screenshot-1.png",
+      "/images/ghosthunter-screenshot-2.png"
     ],
     "demoScript": [
       "Open any job posting on LinkedIn or Indeed",
