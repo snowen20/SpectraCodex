@@ -1,5 +1,30 @@
 [
   {
+    "slug": "ghosthunter",
+    "title": "GhostHunter",
+    "pitch": "Chrome extension that scores job postings for ghost job likelihood — stop wasting time on jobs that were never real.",
+    "audience": "Job seekers tired of applying to ghost jobs, stale listings, and recruiter bait on LinkedIn and Indeed",
+    "problem": "Up to 40% of job postings online are ghost jobs — never meant to be filled. GhostHunter scans any listing and tells you the odds before you waste your time.",
+    "ctaLink": "https://ghosthunter.gumroad.com",
+    "ctaLabel": "Get GhostHunter",
+    "priceModel": "freemium",
+    "thumbnail": "https://placehold.co/400x300/1a1a2e/00ff88?text=GhostHunter",
+    "screenshots": [
+      "https://placehold.co/800x500/1a1a2e/00ff88?text=Screenshot+1",
+      "https://placehold.co/800x500/1a1a2e/00ff88?text=Screenshot+2"
+    ],
+    "demoScript": [
+      "Open any job posting on LinkedIn or Indeed",
+      "GhostHunter automatically scans the listing using 15+ weighted heuristics",
+      "View your Ghost Score — a 0-100 likelihood rating across five integrity dials",
+      "Upgrade with credits to unlock the Resume Fit Checker and AI Resume Builder — tailor your resume to any posting instantly"
+    ],
+    "contact": "support@spectracodex.com",
+    "tags": ["job-search", "chrome-extension", "AI"],
+    "dateAdded": "2026-03-10",
+    "featured": true
+  },
+  {
     "slug": "pixel-quest-builder",
     "title": "Pixel Quest Builder",
     "pitch": "Build retro-style RPG browser games with zero code — drag tiles, define quests, export in minutes.",
