@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0a0a0a"/>
+
+  <!-- Glow ring behind clock -->
+  <circle cx="200" cy="142" r="80" fill="none" stroke="#7c3aed" stroke-width="1" opacity="0.15"/>
+  <circle cx="200" cy="142" r="90" fill="none" stroke="#7c3aed" stroke-width="1" opacity="0.08"/>
+
+  <!-- Clock face -->
+  <circle cx="200" cy="142" r="70" fill="#111122" stroke="#7c3aed" stroke-width="2.5"/>
+
+  <!-- Tick marks -->
+  <g stroke="#7c3aed" stroke-width="2" opacity="0.5">
+    <line x1="200" y1="76" x2="200" y2="86"/>
+    <line x1="200" y1="198" x2="200" y2="208"/>
+    <line x1="134" y1="142" x2="144" y2="142"/>
+    <line x1="256" y1="142" x2="266" y2="142"/>
+  </g>
+  <!-- Minor ticks -->
+  <g stroke="#7c3aed" stroke-width="1" opacity="0.25">
+    <line x1="235" y1="79" x2="232" y2="88"/>
+    <line x1="261" y1="107" x2="253" y2="111"/>
+    <line x1="261" y1="177" x2="253" y2="173"/>
+    <line x1="235" y1="205" x2="232" y2="196"/>
+    <line x1="165" y1="205" x2="168" y2="196"/>
+    <line x1="139" y1="177" x2="147" y2="173"/>
+    <line x1="139" y1="107" x2="147" y2="111"/>
+    <line x1="165" y1="79" x2="168" y2="88"/>
+  </g>
+
+  <!-- Progress arc (about 75% complete) -->
+  <circle cx="200" cy="142" r="60" fill="none" stroke="#7c3aed" stroke-width="5"
+    stroke-dasharray="283 94" stroke-dashoffset="71"
+    stroke-linecap="round" opacity="0.9"
+    transform="rotate(-90 200 142)"/>
+
+  <!-- Hour hand -->
+  <line x1="200" y1="142" x2="200" y2="104" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <!-- Minute hand -->
+  <line x1="200" y1="142" x2="228" y2="124" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Center dot -->
+  <circle cx="200" cy="142" r="4" fill="#7c3aed"/>
+
+  <!-- Streak flame -->
+  <path d="M200 218 C194 210 188 202 192 195 C194 200 196 202 198 200 C196 193 200 185 206 182 C204 188 207 192 210 190 C208 196 211 202 208 210 Z" fill="#9d5cf0" opacity="0.9"/>
+
+  <!-- Label -->
+  <text x="200" y="272" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#7c3aed" text-anchor="middle" letter-spacing="2">FOCUSFLOW TIMER</text>
+</svg>

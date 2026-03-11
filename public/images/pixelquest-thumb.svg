@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0a0a0a"/>
+
+  <!-- Subtle grid background -->
+  <g opacity="0.08">
+    <line x1="0" y1="30" x2="400" y2="30" stroke="#7c3aed" stroke-width="1"/>
+    <line x1="0" y1="60" x2="400" y2="60" stroke="#7c3aed" stroke-width="1"/>
+    <line x1="0" y1="90" x2="400" y2="90" stroke="#7c3aed" stroke-width="1"/>
+    <line x1="0" y1="120" x2="400" y2="120" stroke="#7c3aed" stroke-width="1"/>
+    <line x1="0" y1="150" x2="400" y2="150" stroke="#7c3aed" stroke-width="1"/>
+    <line x1="0" y1="180" x2="400" y2="180" stroke="#7c3aed" stroke-width="1"/>
+    <line x1="0" y1="210" x2="400" y2="210" stroke="#7c3aed" stroke-width="1"/>
+    <line x1="0" y1="240" x2="400" y2="240" stroke="#7c3aed" stroke-width="1"/>
+    <line x1="0" y1="270" x2="400" y2="270" stroke="#7c3aed" stroke-width="1"/>
+    <line x1="50" y1="0" x2="50" y2="300" stroke="#7c3aed" stroke-width="1"/>
+    <line x1="100" y1="0" x2="100" y2="300" stroke="#7c3aed" stroke-width="1"/>
+    <line x1="150" y1="0" x2="150" y2="300" stroke="#7c3aed" stroke-width="1"/>
+    <line x1="200" y1="0" x2="200" y2="300" stroke="#7c3aed" stroke-width="1"/>
+    <line x1="250" y1="0" x2="250" y2="300" stroke="#7c3aed" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="300" stroke="#7c3aed" stroke-width="1"/>
+    <line x1="350" y1="0" x2="350" y2="300" stroke="#7c3aed" stroke-width="1"/>
+  </g>
+
+  <!-- Game controller body -->
+  <rect x="118" y="108" width="164" height="84" rx="42" fill="#1a1a2e" stroke="#7c3aed" stroke-width="2"/>
+
+  <!-- Left grip -->
+  <ellipse cx="140" cy="192" rx="22" ry="28" fill="#1a1a2e" stroke="#7c3aed" stroke-width="2"/>
+  <!-- Right grip -->
+  <ellipse cx="260" cy="192" rx="22" ry="28" fill="#1a1a2e" stroke="#7c3aed" stroke-width="2"/>
+
+  <!-- D-pad left cluster -->
+  <!-- Horizontal bar -->
+  <rect x="140" y="136" width="36" height="12" rx="3" fill="#7c3aed"/>
+  <!-- Vertical bar -->
+  <rect x="152" y="124" width="12" height="36" rx="3" fill="#7c3aed"/>
+
+  <!-- ABXY buttons right cluster -->
+  <circle cx="252" cy="136" r="6" fill="#9d5cf0"/>
+  <circle cx="266" cy="148" r="6" fill="#7c3aed"/>
+  <circle cx="252" cy="160" r="6" fill="#5b21b6"/>
+  <circle cx="238" cy="148" r="6" fill="#9d5cf0"/>
+
+  <!-- Center buttons -->
+  <rect x="186" y="143" width="12" height="8" rx="4" fill="#333355"/>
+  <rect x="202" y="143" width="12" height="8" rx="4" fill="#333355"/>
+
+  <!-- Pixel art sparkles -->
+  <rect x="90" y="70" width="6" height="6" fill="#7c3aed" opacity="0.8"/>
+  <rect x="84" y="76" width="6" height="6" fill="#9d5cf0" opacity="0.5"/>
+  <rect x="96" y="76" width="6" height="6" fill="#9d5cf0" opacity="0.5"/>
+  <rect x="90" y="82" width="6" height="6" fill="#7c3aed" opacity="0.8"/>
+
+  <rect x="304" y="70" width="6" height="6" fill="#7c3aed" opacity="0.8"/>
+  <rect x="298" y="76" width="6" height="6" fill="#9d5cf0" opacity="0.5"/>
+  <rect x="310" y="76" width="6" height="6" fill="#9d5cf0" opacity="0.5"/>
+  <rect x="304" y="82" width="6" height="6" fill="#7c3aed" opacity="0.8"/>
+
+  <!-- Label -->
+  <text x="200" y="252" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#7c3aed" text-anchor="middle" letter-spacing="2">PIXEL QUEST BUILDER</text>
+</svg>

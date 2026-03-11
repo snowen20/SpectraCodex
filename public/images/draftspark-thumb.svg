@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0a0a0a"/>
+
+  <!-- Document -->
+  <rect x="130" y="68" width="120" height="154" rx="6" fill="#111122" stroke="#333355" stroke-width="1.5"/>
+  <!-- Dog-ear fold -->
+  <polygon points="222,68 250,68 250,96" fill="#0a0a0a"/>
+  <polyline points="222,68 222,96 250,96" fill="none" stroke="#333355" stroke-width="1.5"/>
+
+  <!-- Text lines on document -->
+  <rect x="146" y="106" width="72" height="5" rx="2.5" fill="#333355"/>
+  <rect x="146" y="120" width="60" height="5" rx="2.5" fill="#333355"/>
+  <rect x="146" y="134" width="76" height="5" rx="2.5" fill="#333355"/>
+  <rect x="146" y="148" width="50" height="5" rx="2.5" fill="#333355"/>
+  <!-- Active typing line -->
+  <rect x="146" y="162" width="48" height="5" rx="2.5" fill="#7c3aed" opacity="0.8"/>
+  <!-- Cursor blink -->
+  <rect x="197" y="160" width="2" height="9" rx="1" fill="#9d5cf0"/>
+
+  <!-- Pen / nib -->
+  <g transform="translate(232, 164) rotate(-40)">
+    <!-- Pen body -->
+    <rect x="-6" y="-44" width="12" height="36" rx="3" fill="#7c3aed"/>
+    <!-- Pen grip -->
+    <rect x="-6" y="-10" width="12" height="10" rx="2" fill="#5b21b6"/>
+    <!-- Nib -->
+    <polygon points="-5,0 5,0 0,16" fill="#9d5cf0"/>
+    <!-- Ink dot -->
+    <circle cx="0" cy="18" r="2" fill="#9d5cf0" opacity="0.7"/>
+  </g>
+
+  <!-- Spark / lightning bolts -->
+  <path d="M290 88 L284 102 L290 102 L282 118 L296 100 L289 100 Z" fill="#7c3aed" opacity="0.9"/>
+  <path d="M108 96 L103 108 L108 108 L101 122 L114 106 L108 106 Z" fill="#9d5cf0" opacity="0.6"/>
+
+  <!-- Label -->
+  <text x="200" y="258" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#7c3aed" text-anchor="middle" letter-spacing="2">DRAFT SPARK</text>
+</svg>

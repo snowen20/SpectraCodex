@@ -33,7 +33,7 @@
     "ctaLink": "https://example.com/pixel-quest-builder",
     "ctaLabel": "Play now",
     "priceModel": "free",
-    "thumbnail": "https://placehold.co/400x300/7c3aed/white?text=PixelQuest",
+    "thumbnail": "/images/pixelquest-thumb.svg",
     "screenshots": [
       "https://placehold.co/800x500/1a1a2e/7c3aed?text=Screenshot+1",
       "https://placehold.co/800x500/1a1a2e/7c3aed?text=Screenshot+2"
@@ -58,7 +58,7 @@
     "ctaLink": "https://example.com/focusflow-timer",
     "ctaLabel": "Try it free",
     "priceModel": "free",
-    "thumbnail": "https://placehold.co/400x300/7c3aed/white?text=FocusFlow",
+    "thumbnail": "/images/focusflow-thumb.svg",
     "screenshots": [
       "https://placehold.co/800x500/0f1923/7c3aed?text=Screenshot+1",
       "https://placehold.co/800x500/0f1923/7c3aed?text=Screenshot+2"
@@ -83,7 +83,7 @@
     "ctaLink": "https://example.com/palette-drop",
     "ctaLabel": "Try it free",
     "priceModel": "free",
-    "thumbnail": "https://placehold.co/400x300/7c3aed/white?text=PaletteDrop",
+    "thumbnail": "/images/palettedrop-thumb.svg",
     "screenshots": [
       "https://placehold.co/800x500/12001f/7c3aed?text=Screenshot+1",
       "https://placehold.co/800x500/12001f/7c3aed?text=Screenshot+2"
@@ -108,7 +108,7 @@
     "ctaLink": "https://example.com/budget-blip",
     "ctaLabel": "Try it free",
     "priceModel": "free",
-    "thumbnail": "https://placehold.co/400x300/7c3aed/white?text=BudgetBlip",
+    "thumbnail": "/images/budgetblip-thumb.svg",
     "screenshots": [
       "https://placehold.co/800x500/001a0f/7c3aed?text=Screenshot+1",
       "https://placehold.co/800x500/001a0f/7c3aed?text=Screenshot+2"
@@ -133,7 +133,7 @@
     "ctaLink": "https://example.com/draft-spark",
     "ctaLabel": "Start writing",
     "priceModel": "freemium",
-    "thumbnail": "https://placehold.co/400x300/7c3aed/white?text=DraftSpark",
+    "thumbnail": "/images/draftspark-thumb.svg",
     "screenshots": [
       "https://placehold.co/800x500/1a1200/7c3aed?text=Screenshot+1",
       "https://placehold.co/800x500/1a1200/7c3aed?text=Screenshot+2"
@@ -158,7 +158,7 @@
     "ctaLink": "https://example.com/locale-lens",
     "ctaLabel": "Explore the map",
     "priceModel": "free",
-    "thumbnail": "https://placehold.co/400x300/7c3aed/white?text=LocaleLens",
+    "thumbnail": "/images/localelens-thumb.svg",
     "screenshots": [
       "https://placehold.co/800x500/001a1a/7c3aed?text=Screenshot+1",
       "https://placehold.co/800x500/001a1a/7c3aed?text=Screenshot+2"

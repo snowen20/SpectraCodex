@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#0a0a0a"/>
+
+  <!-- Color swatch row 1 — purple scale -->
+  <rect x="80" y="80" width="40" height="40" rx="6" fill="#1a0533"/>
+  <rect x="128" y="80" width="40" height="40" rx="6" fill="#2e0d52"/>
+  <rect x="176" y="80" width="40" height="40" rx="6" fill="#4a1a7a"/>
+  <rect x="224" y="80" width="40" height="40" rx="6" fill="#7c3aed"/>
+  <rect x="272" y="80" width="40" height="40" rx="6" fill="#9d5cf0"/>
+
+  <!-- Color swatch row 2 — complementary -->
+  <rect x="80" y="130" width="40" height="40" rx="6" fill="#0d2e1a"/>
+  <rect x="128" y="130" width="40" height="40" rx="6" fill="#1a5233"/>
+  <rect x="176" y="130" width="40" height="40" rx="6" fill="#2d7a52"/>
+  <rect x="224" y="130" width="40" height="40" rx="6" fill="#3aed8c"/>
+  <rect x="272" y="130" width="40" height="40" rx="6" fill="#6ef0b0"/>
+
+  <!-- Color swatch row 3 — neutrals -->
+  <rect x="80" y="180" width="40" height="40" rx="6" fill="#111111"/>
+  <rect x="128" y="180" width="40" height="40" rx="6" fill="#222233"/>
+  <rect x="176" y="180" width="40" height="40" rx="6" fill="#444455"/>
+  <rect x="224" y="180" width="40" height="40" rx="6" fill="#888899"/>
+  <rect x="272" y="180" width="40" height="40" rx="6" fill="#c0c0c8"/>
+
+  <!-- Droplet icon overlaid on accent swatch -->
+  <path d="M244 87 C244 83 250 76 250 76 C250 76 256 83 256 87 C256 90.3 253.3 93 250 93 C246.7 93 244 90.3 244 87 Z" fill="white" opacity="0.85"/>
+
+  <!-- Subtle border on accent swatch -->
+  <rect x="224" y="80" width="40" height="40" rx="6" fill="none" stroke="white" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Label -->
+  <text x="200" y="258" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#7c3aed" text-anchor="middle" letter-spacing="2">PALETTE DROP</text>
+</svg>
