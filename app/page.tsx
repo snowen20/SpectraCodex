@@ -65,11 +65,20 @@ export default function HomePage() {
               Browse all →
             </Link>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {newThisWeek.map((listing) => (
-              <ListingCard key={listing.slug} listing={listing} />
-            ))}
-          </div>
+          {newThisWeek.some((l) => l.featured) && (
+            <div className="grid grid-cols-1 gap-4 mb-4">
+              {newThisWeek.filter((l) => l.featured).map((listing) => (
+                <ListingCard key={listing.slug} listing={listing} />
+              ))}
+            </div>
+          )}
+          {newThisWeek.some((l) => !l.featured) && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {newThisWeek.filter((l) => !l.featured).map((listing) => (
+                <ListingCard key={listing.slug} listing={listing} />
+              ))}
+            </div>
+          )}
         </section>
       )}
 

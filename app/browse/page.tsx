@@ -45,11 +45,20 @@ export default function BrowsePage() {
           <p className="text-xs text-[#444444] mb-4">
             {filtered.length} result{filtered.length !== 1 ? "s" : ""}
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {filtered.map((listing) => (
-              <ListingCard key={listing.slug} listing={listing} />
-            ))}
-          </div>
+          {filtered.some((l) => l.featured) && (
+            <div className="grid grid-cols-1 gap-4 mb-4">
+              {filtered.filter((l) => l.featured).map((listing) => (
+                <ListingCard key={listing.slug} listing={listing} />
+              ))}
+            </div>
+          )}
+          {filtered.some((l) => !l.featured) && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {filtered.filter((l) => !l.featured).map((listing) => (
+                <ListingCard key={listing.slug} listing={listing} />
+              ))}
+            </div>
+          )}
         </>
       ) : (
         <div className="text-center py-20 text-[#444444]">
