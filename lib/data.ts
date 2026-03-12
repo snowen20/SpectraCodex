@@ -86,6 +86,18 @@ export function getAllDrops(): Drop[] {
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
+export function getAllDropsWithListings(): DropWithListings[] {
+  return [...drops]
+    .filter((d) => d.published)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .map((drop) => ({
+      ...drop,
+      listings: drop.listingSlugs
+        .map((s) => listings.find((l) => l.slug === s))
+        .filter((l): l is Listing => l !== undefined),
+    }));
+}
+
 export function getDropBySlug(slug: string): Drop | undefined {
   return drops.find((d) => d.slug === slug && d.published);
 }

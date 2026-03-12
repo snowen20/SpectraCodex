@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import DropCard from "@/components/DropCard";
-import { getAllDrops } from "@/lib/data";
+import { getAllDropsWithListings } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Drops",
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default function DropsPage() {
-  const drops = getAllDrops();
+  const drops = getAllDropsWithListings();
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
@@ -20,7 +20,7 @@ export default function DropsPage() {
         </p>
       </div>
 
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-6">
         {drops.map((drop) => (
           <DropCard key={drop.slug} drop={drop} />
         ))}

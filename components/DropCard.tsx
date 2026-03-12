@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { type Drop } from "@/lib/data";
+import Image from "next/image";
+import { type DropWithListings } from "@/lib/data";
 
 interface DropCardProps {
-  drop: Drop;
+  drop: DropWithListings;
 }
 
 function formatDate(dateStr: string): string {
@@ -14,22 +15,52 @@ function formatDate(dateStr: string): string {
 }
 
 export default function DropCard({ drop }: DropCardProps) {
+  const thumbnails = drop.listings.slice(0, 5);
+
   return (
     <Link
       href={`/drops/${drop.slug}/`}
+      style={{ borderTop: "2px solid #7c3aed" }}
       className="group block bg-[#111111] border border-[#222222] rounded-lg p-5 hover:border-[#7c3aed] hover:shadow-[0_0_20px_rgba(124,58,237,0.1)] transition-all duration-200"
     >
-      <div className="flex items-start justify-between gap-4 mb-3">
-        <h3 className="font-semibold text-white group-hover:text-[#7c3aed] transition-colors">
-          {drop.title}
-        </h3>
-        <span className="shrink-0 text-xs text-[#666666] bg-[#1a1a1a] border border-[#222222] px-2 py-1 rounded">
-          {formatDate(drop.date)}
-        </span>
-      </div>
-      <p className="text-sm text-[#666666] line-clamp-2 mb-3">
+      <p
+        className="uppercase mb-1"
+        style={{
+          color: "var(--color-muted)",
+          fontSize: "0.75rem",
+          letterSpacing: "0.05em",
+        }}
+      >
+        {formatDate(drop.date)}
+      </p>
+      <h3 className="text-xl font-bold text-white group-hover:text-[#7c3aed] transition-colors mb-3">
+        {drop.title}
+      </h3>
+      <p className="text-sm text-[#666666] line-clamp-2 mb-4">
         {drop.description}
       </p>
+      {thumbnails.length > 0 && (
+        <div className="flex items-center mb-4">
+          {thumbnails.map((listing, i) => (
+            <div
+              key={listing.slug}
+              className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-[#111111] shrink-0"
+              style={{
+                marginLeft: i === 0 ? 0 : -12,
+                zIndex: thumbnails.length - i,
+              }}
+            >
+              <Image
+                src={listing.thumbnail}
+                alt={listing.title}
+                fill
+                className="object-cover"
+                unoptimized
+              />
+            </div>
+          ))}
+        </div>
+      )}
       <p className="text-xs text-[#7c3aed] font-medium">
         {drop.listingSlugs.length} listing
         {drop.listingSlugs.length !== 1 ? "s" : ""} →
