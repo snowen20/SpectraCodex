@@ -5,7 +5,8 @@
     "date": "2026-03-05",
     "description": "Three browser-native tools that actually ship: a game builder, a focus timer, and a color palette generator.",
     "listingSlugs": ["pixel-quest-builder", "focusflow-timer", "palette-drop"],
-    "published": true
+    "published": true,
+    "featured": true
   },
   {
     "slug": "drop-2026-02-28",
