@@ -26,6 +26,7 @@ export interface Drop {
   description: string;
   listingSlugs: string[];
   published: boolean;
+  featured?: boolean;
 }
 
 export interface DropWithListings extends Drop {
