@@ -2,11 +2,11 @@ import Link from "next/link";
 import ListingCard from "@/components/ListingCard";
 import DropCard from "@/components/DropCard";
 import NewsletterForm from "@/components/NewsletterForm";
-import { getNewThisWeek, getAllDrops } from "@/lib/data";
+import { getNewThisWeek, getAllDropsWithListings } from "@/lib/data";
 
 export default function HomePage() {
   const newThisWeek = getNewThisWeek();
-  const drops = getAllDrops();
+  const drops = getAllDropsWithListings();
   const latestDrop = drops[0];
 
   return (
