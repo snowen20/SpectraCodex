@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getAllListings, getListingBySlug, isNewThisWeek } from "@/lib/data";
+import ScreenshotGallery from "@/components/ScreenshotGallery";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -103,22 +104,7 @@ export default async function ListingPage({ params }: Props) {
       {/* Screenshots */}
       <div className="mb-4">
         <h2 className="font-semibold text-white mb-4">Screenshots</h2>
-        <div className="flex flex-col sm:flex-row gap-3">
-          {listing.screenshots.map((src, i) => (
-            <div
-              key={i}
-              className="relative flex-1 aspect-video rounded-lg overflow-hidden bg-[#1a1a1a]"
-            >
-              <Image
-                src={src}
-                alt={`${listing.title} screenshot ${i + 1}`}
-                fill
-                className="object-cover"
-                unoptimized
-              />
-            </div>
-          ))}
-        </div>
+        <ScreenshotGallery screenshots={listing.screenshots} title={listing.title} />
       </div>
 
       {/* 30-Second Demo */}
