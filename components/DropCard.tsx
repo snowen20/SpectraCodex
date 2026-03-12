@@ -36,7 +36,7 @@ export default function DropCard({ drop }: DropCardProps) {
       <h3 className="text-xl font-bold text-white group-hover:text-[#7c3aed] transition-colors mb-3">
         {drop.title}
       </h3>
-      <p className="text-sm text-[var(--color-muted)] line-clamp-2 mb-4">
+      <p className="text-sm line-clamp-2 mb-4" style={{ color: 'var(--color-muted)' }}>
         {drop.description}
       </p>
       {thumbnails.length > 0 && (
