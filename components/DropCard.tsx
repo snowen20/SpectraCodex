@@ -20,9 +20,19 @@ export default function DropCard({ drop }: DropCardProps) {
   return (
     <Link
       href={`/drops/${drop.slug}/`}
-      style={{ borderTop: "2px solid #7c3aed" }}
-      className="group block bg-[#111111] border border-[#222222] rounded-lg p-5 hover:border-[#7c3aed] hover:shadow-[0_0_20px_rgba(124,58,237,0.1)] transition-all duration-200"
+      style={{
+        borderTop: "2px solid #7c3aed",
+        ...(drop.featured && {
+          boxShadow: "0 0 0 1px #7c3aed, 0 0 24px rgba(124, 58, 237, 0.3)",
+        }),
+      }}
+      className="relative group block bg-[#111111] border border-[#222222] rounded-lg p-5 hover:border-[#7c3aed] hover:shadow-[0_0_20px_rgba(124,58,237,0.1)] transition-all duration-200"
     >
+      {drop.featured && (
+        <span className="absolute top-0 right-0 text-xs font-bold px-2 py-1 rounded" style={{ background: "#7c3aed", color: "white" }}>
+          Featured
+        </span>
+      )}
       <p
         className="uppercase mb-1"
         style={{
