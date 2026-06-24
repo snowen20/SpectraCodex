@@ -69,9 +69,16 @@ export const metadata: Metadata = {
     description:
       "An independent Fortean publication investigating paranormal, ufological, and allied phenomena through a structural-comparative lens.",
   },
+  // PRE-LAUNCH: site is private until go-live. noindex/nofollow keeps it out of
+  // search results. At go-live, set index/follow back to true.
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
   },
 };
 
