@@ -1,34 +1,77 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import {
+  Cormorant_Garamond,
+  Source_Serif_4,
+  IM_Fell_DW_Pica,
+} from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
+
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  axes: ["opsz"],
+  weight: "variable",
+  style: ["normal", "italic"],
+  variable: "--font-source-serif",
+  display: "swap",
+});
+
+const imFell = IM_Fell_DW_Pica({
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal", "italic"],
+  variable: "--font-im-fell",
+  display: "swap",
+});
+
+const siteUrl = "https://spectracodex.com";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "SpectraCodex — Curated Vibe-Coded Apps & Tools",
-    template: "%s | SpectraCodex",
+    default: "Spectra Codex",
+    template: "%s — Spectra Codex",
   },
   description:
-    "A curated directory of vibe-coded apps and tools. Discover, explore, and ship your next creative project.",
-  keywords: ["vibe coding", "apps", "tools", "directory", "indie", "no-code"],
+    "An independent Fortean publication investigating paranormal, ufological, and allied phenomena through a structural-comparative lens.",
+  keywords: [
+    "Fortean",
+    "paranormal",
+    "UFO",
+    "ufology",
+    "Vallée",
+    "Keel",
+    "strange phenomena",
+    "independent magazine",
+  ],
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://spectracodex.com",
-    siteName: "SpectraCodex",
-    title: "SpectraCodex — Curated Vibe-Coded Apps & Tools",
+    url: siteUrl,
+    siteName: "Spectra Codex",
+    title: "Spectra Codex",
     description:
-      "A curated directory of vibe-coded apps and tools. Discover, explore, and ship.",
+      "An independent Fortean publication investigating paranormal, ufological, and allied phenomena through a structural-comparative lens.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SpectraCodex — Curated Vibe-Coded Apps & Tools",
+    title: "Spectra Codex",
     description:
-      "A curated directory of vibe-coded apps and tools. Discover, explore, and ship.",
+      "An independent Fortean publication investigating paranormal, ufological, and allied phenomena through a structural-comparative lens.",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -37,12 +80,32 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Periodical",
+    name: "Spectra Codex",
+    url: siteUrl,
+    description:
+      "An independent Fortean publication investigating paranormal, ufological, and allied phenomena through a structural-comparative lens.",
+    publisher: {
+      "@type": "Organization",
+      name: "Spectra Codex",
+      url: siteUrl,
+    },
+  };
+
   return (
-    <html lang="en" className={inter.variable}>
+    <html
+      lang="en"
+      className={`${cormorant.variable} ${sourceSerif.variable} ${imFell.variable}`}
+    >
       <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
-      <body className="min-h-screen flex flex-col antialiased">
+      <body className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

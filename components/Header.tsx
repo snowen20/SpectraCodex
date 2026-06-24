@@ -1,95 +1,130 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
 
-const navLinks = [
-  { href: "/browse", label: "Browse" },
-  { href: "/drops", label: "Drops" },
-  { href: "/submit", label: "Submit" },
-  { href: "/jam", label: "Jam" },
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/issues/01", label: "Current Issue" },
+  { href: "/issues", label: "Archive" },
+  { href: "/framework", label: "Framework Features" },
+  { href: "/essays", label: "Essays" },
+  { href: "/glossary", label: "Glossary" },
   { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Header() {
-  const pathname = usePathname();
-  const [menuOpen, setMenuOpen] = useState(false);
-
   return (
-    <header className="border-b border-[#222222] bg-[#0a0a0a] sticky top-0 z-50">
-      <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
-        <Link
-          href="/"
-          className="font-bold text-lg tracking-tight text-white hover:text-[#7c3aed] transition-colors"
-        >
-          SpectraCodex
+    <header style={{ backgroundColor: "var(--color-bg)" }}>
+      {/* Masthead */}
+      <div
+        className="masthead-grid"
+        style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          padding: "1.5rem 2rem 1.25rem",
+          display: "grid",
+          gridTemplateColumns: "1fr auto 1fr",
+          alignItems: "center",
+          gap: "2rem",
+        }}
+      >
+        <Link href="/" style={{ textDecoration: "none" }}>
+          <p
+            style={{
+              fontFamily: "var(--font-display)",
+              fontSize: "clamp(1.6rem, 2.8vw, 2.25rem)",
+              fontWeight: 600,
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              color: "var(--color-ink)",
+              lineHeight: 1,
+              margin: 0,
+            }}
+          >
+            Spectra Codex
+          </p>
+          <p
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: "0.625rem",
+              letterSpacing: "0.22em",
+              textTransform: "uppercase",
+              color: "var(--color-muted)",
+              marginTop: "0.35rem",
+            }}
+          >
+            An Independent Fortean Publication
+          </p>
         </Link>
 
-        {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-1">
-          {navLinks.map((link) => (
+        <div
+          className="masthead-ornament"
+          style={{
+            color: "var(--color-accent-dim)",
+            fontSize: "1.25rem",
+            textAlign: "center",
+            fontFamily: "var(--font-ornament)",
+            opacity: 0.7,
+          }}
+        >
+          ✦
+        </div>
+
+        <p
+          className="masthead-quote"
+          style={{
+            fontFamily: "var(--font-display)",
+            fontSize: "0.8rem",
+            fontStyle: "italic",
+            color: "var(--color-muted)",
+            textAlign: "right",
+            lineHeight: 1.55,
+            marginLeft: "auto",
+            maxWidth: "240px",
+          }}
+        >
+          "We do not chase anomalies. We examine the structures that make them
+          possible."
+        </p>
+      </div>
+
+      {/* Nav bar */}
+      <div
+        style={{
+          borderTop: "1px solid var(--color-border)",
+          borderBottom: "1px solid var(--color-border)",
+          backgroundColor: "var(--color-surface)",
+        }}
+      >
+        <nav
+          className="header-nav"
+          style={{
+            maxWidth: "1200px",
+            margin: "0 auto",
+            padding: "0 1.5rem",
+          }}
+        >
+          {navItems.map(({ href, label }) => (
             <Link
-              key={link.href}
-              href={link.href}
-              className={`px-3 py-1.5 rounded text-sm font-medium transition-colors ${
-                pathname === link.href || pathname.startsWith(link.href + "/")
-                  ? "text-white bg-[#7c3aed]"
-                  : "text-[#666666] hover:text-white hover:bg-[#111111]"
-              }`}
+              key={href}
+              href={href}
+              style={{
+                fontFamily: "var(--font-body)",
+                fontSize: "0.625rem",
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+                color: "var(--color-muted)",
+                textDecoration: "none",
+                padding: "0.8rem 0.9rem",
+                display: "block",
+                whiteSpace: "nowrap",
+                flexShrink: 0,
+              }}
             >
-              {link.label}
+              {label}
             </Link>
           ))}
         </nav>
-
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden text-[#666666] hover:text-white p-1"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          {menuOpen ? (
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-              <path
-                fillRule="evenodd"
-                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
-          ) : (
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-              <path
-                fillRule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clipRule="evenodd"
-              />
-            </svg>
-          )}
-        </button>
       </div>
-
-      {/* Mobile menu */}
-      {menuOpen && (
-        <div className="md:hidden border-t border-[#222222] bg-[#0a0a0a] px-4 pb-3">
-          <nav className="flex flex-col gap-1 pt-2">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMenuOpen(false)}
-                className={`px-3 py-2 rounded text-sm font-medium transition-colors ${
-                  pathname === link.href || pathname.startsWith(link.href + "/")
-                    ? "text-white bg-[#7c3aed]"
-                    : "text-[#666666] hover:text-white hover:bg-[#111111]"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
-      )}
     </header>
   );
 }

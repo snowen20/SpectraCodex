@@ -2,37 +2,77 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[#222222] bg-[#0a0a0a] mt-16">
-      <div className="max-w-5xl mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div className="text-center sm:text-left">
-          <p className="text-sm text-[#666666]">
-            &copy; {new Date().getFullYear()} SpectraCodex. Built for
-            vibecodeineers.
-          </p>
-          <p className="text-xs text-[#444444] mt-1">
-            Curated tools for people who ship first and polish later.
-          </p>
-        </div>
-        <div className="flex items-center gap-4">
-          <Link
-            href="/about"
-            className="text-xs text-[#666666] hover:text-white transition-colors"
-          >
-            About
-          </Link>
-          <Link
-            href="/submit"
-            className="text-xs text-[#666666] hover:text-white transition-colors"
-          >
-            Submit
-          </Link>
+    <footer
+      style={{
+        borderTop: "1px solid var(--color-border)",
+        backgroundColor: "var(--color-surface)",
+      }}
+    >
+      <div
+        style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          padding: "1.25rem 2rem",
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-between",
+          alignItems: "center",
+          gap: "1rem",
+        }}
+      >
+        <div style={{ display: "flex", gap: "1.5rem", alignItems: "center", flexWrap: "wrap" }}>
           <a
-            href="#top"
-            className="text-xs text-[#666666] hover:text-[#7c3aed] transition-colors"
+            href="mailto:editor@spectracodex.com"
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: "0.75rem",
+              color: "var(--color-muted)",
+              textDecoration: "none",
+            }}
           >
-            Back to top ↑
+            editor@spectracodex.com
           </a>
+          <span
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: "0.75rem",
+              color: "var(--color-dim)",
+            }}
+          >
+            ISSN pending
+          </span>
+          <span
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: "0.75rem",
+              color: "var(--color-dim)",
+            }}
+          >
+            © {new Date().getFullYear()} Spectra Codex
+          </span>
         </div>
+
+        <nav style={{ display: "flex", gap: "1.25rem", alignItems: "center" }}>
+          {[
+            { href: "/about", label: "About" },
+            { href: "/contact", label: "Contact" },
+          ].map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              style={{
+                fontFamily: "var(--font-body)",
+                fontSize: "0.6875rem",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                color: "var(--color-dim)",
+                textDecoration: "none",
+              }}
+            >
+              {label}
+            </Link>
+          ))}
+        </nav>
       </div>
     </footer>
   );

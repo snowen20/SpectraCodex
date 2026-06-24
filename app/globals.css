@@ -1,21 +1,226 @@
 @import "tailwindcss";
 
-@theme inline {
-  --color-bg: #0a0a0a;
-  --color-surface: #111111;
-  --color-border: #222222;
-  --color-muted: #c0c0c8;
-  --color-accent: #7c3aed;
-  --color-accent-hover: #6d28d9;
-  --font-sans: var(--font-inter);
+@theme {
+  --color-bg: #14100c;
+  --color-surface: #1e1810;
+  --color-surface-hover: #261f14;
+  --color-ink: #e8dfc8;
+  --color-muted: #857a68;
+  --color-dim: #4a4236;
+  --color-accent: #c4943a;
+  --color-accent-dim: #8a6420;
+  --color-border: #2c2218;
+  --color-border-light: #3a3020;
+
+  --font-display: var(--font-cormorant), "Georgia", serif;
+  --font-body: var(--font-source-serif), "Georgia", serif;
+  --font-ornament: var(--font-im-fell), "Georgia", serif;
+  --font-mono: "Courier New", monospace;
 }
 
 html {
-  scroll-behavior: smooth;
+  background-color: #14100c;
+  color: #e8e3d6;
+  font-family: var(--font-body);
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: #0a0a0a;
-  color: white;
-  font-family: var(--font-inter, system-ui, sans-serif);
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  min-height: 100vh;
+}
+
+/* Article prose styles */
+.prose {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.85;
+  color: var(--color-ink);
+  max-width: 680px;
+}
+
+.prose p {
+  margin-bottom: 1.5em;
+}
+
+.prose > p:first-of-type::first-letter {
+  font-family: var(--font-ornament);
+  font-size: 4.5em;
+  line-height: 0.75;
+  float: left;
+  padding-right: 0.08em;
+  padding-top: 0.06em;
+  color: var(--color-accent);
+}
+
+.prose h2 {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  margin-top: 2.5em;
+  margin-bottom: 0.75em;
+  color: var(--color-ink);
+}
+
+.prose h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-style: italic;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  color: var(--color-ink);
+}
+
+.prose blockquote {
+  border-left: 2px solid var(--color-accent);
+  padding-left: 1.5em;
+  margin: 2em 0;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--color-ink);
+  line-height: 1.6;
+}
+
+.prose blockquote p {
+  margin: 0;
+}
+
+.prose hr {
+  border: none;
+  text-align: center;
+  margin: 2.5em 0;
+  color: var(--color-muted);
+}
+
+.prose hr::after {
+  content: "✦  ✦  ✦";
+  font-size: 0.75rem;
+  letter-spacing: 0.5em;
+  color: var(--color-accent-dim);
+}
+
+.prose a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent-dim);
+  text-underline-offset: 3px;
+}
+
+.prose a:hover {
+  color: var(--color-ink);
+  text-decoration-color: var(--color-ink);
+}
+
+.prose strong {
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.prose em {
+  font-style: italic;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.prose li {
+  margin-bottom: 0.4em;
+}
+
+.prose code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: var(--color-surface);
+  padding: 0.15em 0.4em;
+  border-radius: 2px;
+  color: var(--color-accent);
+}
+
+/* Framework prose — same as article but no drop cap */
+.prose-framework > p:first-of-type::first-letter {
+  all: unset;
+}
+
+/* Ornamental rule */
+.ornament {
+  text-align: center;
+  color: var(--color-accent-dim);
+  letter-spacing: 0.5em;
+  font-size: 0.75rem;
+  margin: 2rem 0;
+}
+
+/* Issue number badge style */
+.issue-badge {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* Responsive: header nav scrolls on small screens */
+.header-nav {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.header-nav::-webkit-scrollbar { display: none; }
+
+/* Two-column layout helpers */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+@media (max-width: 720px) {
+  .two-col { grid-template-columns: 1fr; gap: 2rem; }
+  .hero-grid { grid-template-columns: 1fr !important; }
+  .framework-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .archive-grid { grid-template-columns: 1fr !important; }
+  .footer-grid { grid-template-columns: 1fr !important; }
+  .masthead-grid { grid-template-columns: 1fr !important; }
+  .masthead-quote { display: none !important; }
+  .masthead-ornament { display: none !important; }
+}
+
+/* Cover placeholder */
+.cover-placeholder {
+  background: linear-gradient(170deg, #1e1a12 0%, #0e0a06 55%, #181410 100%);
+  border: 1px solid var(--color-border-light);
+  position: relative;
+  overflow: hidden;
+}
+.cover-placeholder::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 40% 30%, rgba(196,148,58,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Framework card image placeholder */
+.feature-img-placeholder {
+  background: linear-gradient(160deg, #1a1510 0%, #0c0906 100%);
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+  overflow: hidden;
+}
+.feature-img-placeholder::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 60%, rgba(196,148,58,0.08) 0%, transparent 65%);
+  pointer-events: none;
 }
