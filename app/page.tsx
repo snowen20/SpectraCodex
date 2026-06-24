@@ -1,5 +1,4 @@
 import Link from "next/link";
-import EmailCapture from "@/components/EmailCapture";
 import { getAllIssueNumbers, getIssueMeta, getIssueArticles } from "@/lib/content";
 
 const frameworkFeatures = [
@@ -631,10 +630,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── What We're Reading + Email ── */}
+      {/* ── What We're Reading ── */}
       <section style={{ padding: "3.5rem 2rem" }}>
         <div
-          className="two-col"
           style={{ maxWidth: "1100px", margin: "0 auto" }}
         >
           {/* Reading list */}
@@ -697,14 +695,6 @@ export default function HomePage() {
                 </Link>
               )}
             </div>
-          </div>
-
-          {/* Email signup */}
-          <div>
-            <p style={{ ...s.label, marginBottom: "1.5rem", borderBottom: "1px solid var(--color-border)", paddingBottom: "0.75rem" }}>
-              Receive New Issues &amp; Essays
-            </p>
-            <EmailCapture compact />
           </div>
         </div>
       </section>
